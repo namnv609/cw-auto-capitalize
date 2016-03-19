@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+
+    "name": "Auto Capitalize",
+    "description": "Auto capitalize text for input box",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "assets/img/icon.png",
+        "default_popup": "popup.html",
+        "default_title": "Auto capitalize text for input box"
+    },
+
+    "permissions": [
+        "https://www.chatwork.com/"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://www.chatwork.com/*"],
+            "js": [
+                "assets/js/jquery.min.js",
+                "assets/js/auto-capitalize.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
