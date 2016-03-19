@@ -14,7 +14,7 @@ $(function() {
         }
     });
     $("#_chatSendTool").on("click", "#_autoCapitalize", function() {
-        autoCapitalizeEnableStatus = (autoCapitalizeEnableStatus == "true") ? "false": "true";
+        autoCapitalizeEnableStatus = (autoCapitalizeEnableStatus == "true") ? "false" : "true";
         setAutoCapitalizeEnableStatus(autoCapitalizeEnableStatus);
         $("#autoCapToggle", $(this)).text(getEnableStatusText(autoCapitalizeEnableStatus));
         $(this).attr("aria-label", getEnableTooltip(autoCapitalizeEnableStatus));
